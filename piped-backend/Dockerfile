@@ -11,10 +11,10 @@ WORKDIR /app
 # Checkout latest stable release (optional)
 # RUN git checkout tags/<version>
 
-# Disable signups by patching AuthController
-RUN sed -i 's/public User registerUser(/public User registerUserDisabled(/' \
-    src/main/java/com/github/TeamPiped/controllers/AuthController.java \
-    && echo "\n// Signups disabled automatically" >> src/main/java/com/github/TeamPiped/controllers/AuthController.java
+# Disable signups by patching AuthController - error in build
+# RUN sed -i 's/public User registerUser(/public User registerUserDisabled(/' \
+#     src/main/java/com/github/TeamPiped/controllers/AuthController.java \
+#     && echo "\n// Signups disabled automatically" >> src/main/java/com/github/TeamPiped/controllers/AuthController.java
 
 # Build backend
 RUN ./gradlew build --no-daemon
