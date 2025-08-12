@@ -4,7 +4,7 @@ FROM node:20 AS build
 RUN apt-get update && apt-get install -y git
 
 # Clone Piped frontend
-RUN git clone https://github.com/TeamPiped/Piped-Frontend.git /app
+RUN git clone https://github.com/bhavinnorr/Piped.git /app
 
 WORKDIR /app
 
