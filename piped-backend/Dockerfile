@@ -28,7 +28,7 @@ COPY --from=build /app/build/libs/*.jar /app/piped.jar
 # Environment variables for backend config
 ENV PORT=8080
 ENV HTTP_WORKERS=4
-ENV YOUTUBE_API_KEY= # optional if you use API key
+# ENV YOUTUBE_API_KEY= # optional if you use API key
 ENV DB_DRIVER=org.h2.Driver
 ENV DB_URL=jdbc:h2:file:/app/data/db
 
