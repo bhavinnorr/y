@@ -10,7 +10,9 @@ WORKDIR /app
 
 # Set backend URL (replace YOUR_BACKEND_URL with your backend Render URL)
 ENV BACKEND_URL=https://y-v282.onrender.com
-RUN sed -i "s|https://pipedapi.kavin.rocks|$BACKEND_URL|g" src/config.json
+ENV PORT=3000
+# below line giving error
+# RUN sed -i "s|https://pipedapi.kavin.rocks|$BACKEND_URL|g" src/config.json
 
 # Build frontend
 RUN npm install && npm run build
