@@ -11,6 +11,9 @@ WORKDIR /app
 # Set backend URL (replace YOUR_BACKEND_URL with your backend Render URL)
 ENV BACKEND_URL=https://y-v282.onrender.com
 ENV PORT=3000
+ENV VITE_PIPED_API=https://y-v282.onrender.com
+ENV VITE_PIPED_INSTANCES=https://y-v282.onrender.com/instances
+ENV VITE_PIPED_PROXY=https://y-v282.onrender.com
 # below line giving error
 # RUN sed -i "s|https://pipedapi.kavin.rocks|$BACKEND_URL|g" src/config.json
 
